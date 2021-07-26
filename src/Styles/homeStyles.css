@@ -1,0 +1,320 @@
+.heading {
+  text-align: center;
+  font-weight: 900;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(39, 4, 4);
+  background-color: rgba(255, 0, 0, 0.453);
+  margin: 3% 10%;
+  height: 35rem;
+  border-radius: 1rem;
+}
+
+.container > div {
+  width: 100px;
+  height: 50px;
+  background-color: #2bae66ff;
+  margin: 1rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem;
+  border: 3px solid black;
+  border-radius: 6rem;
+  font-weight: 700;
+}
+
+/* angles calculation */
+.heading-angle {
+  font-size: 36px;
+  text-decoration: underline;
+  text-align: center;
+}
+.container-angle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(39, 4, 4);
+  background-color: rgba(255, 0, 0, 0.453);
+  margin: 3% 10%;
+  height: 35rem;
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .container-angle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(39, 4, 4);
+    background-color: rgba(255, 0, 0, 0.453);
+    margin: 3% 5%;
+  }
+}
+
+.container-angle > div > input {
+  width: 50px;
+  text-align: center;
+  margin: 1rem;
+  padding: 0.6rem;
+}
+.container-angle > div > button {
+  font-size: larger;
+  padding: 0.5rem;
+  border: 2px solid black;
+  background-color: #2bae66ff;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+/* hypotanuous css */
+
+.container-hypo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(39, 4, 4);
+  background-color: rgba(255, 0, 0, 0.453);
+  margin: 3% 10%;
+  height: 35rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.container-hypo > button {
+  border: 2px solid black;
+  margin: 2rem;
+  padding: 0.6rem;
+  font-size: larger;
+  background-color: #2bae66ff;
+  border-radius: 0.9rem;
+}
+
+.container-hypo > input {
+  padding: 0.2rem;
+  font-size: larger;
+  width: 70px;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .container-hypo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(39, 4, 4);
+    background-color: rgba(255, 0, 0, 0.453);
+    margin: 3% 5%;
+    text-align: center;
+  }
+}
+
+/* area styles */
+.container-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 2px solid rgb(39, 4, 4);
+  background-color: rgba(255, 0, 0, 0.453);
+  margin: 3% 10%;
+  height: 35rem;
+  border-radius: 1rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.container-area > div {
+  width: 100px;
+  height: 75px;
+  background-color: #2bae66ff;
+  margin: 1rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem;
+  border: 3px solid black;
+  border-radius: 6rem;
+  font-weight: 700;
+}
+
+.container-area > h2 {
+  width: 100%;
+  height: 10px;
+  margin-top: 6rem;
+}
+
+/* area with height and base */
+
+.container-area-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(39, 4, 4);
+  background-color: rgba(255, 0, 0, 0.453);
+  margin: 3% 10%;
+  height: 35rem;
+  border-radius: 1rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+
+
+.container-area-1 > div > input {
+  padding: 0.2rem;
+  font-size: larger;
+  width: 70px;
+  text-align: center;
+  margin: 0rem 2rem;
+}
+
+.container-area-1 > div > label {
+  padding: 0.6rem;
+}
+.container-area-1 > .button {
+  width: 100%;
+  height: auto;
+  margin-bottom: 6rem;
+}
+
+.container-area-1 > .button > button {
+  border: 2px solid black;
+  margin: 2rem;
+  padding: 0.6rem;
+  font-size: larger;
+  background-color: #2bae66ff;
+  border-radius: 0.9rem;
+  cursor: pointer;
+}
+
+.container-area-1 > .header{
+  width:100%;
+}
+
+/* all three side trangle area */
+
+.container-area-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(39, 4, 4);
+  background-color: rgba(255, 0, 0, 0.453);
+  margin: 3% 10%;
+  height: 35rem;
+  border-radius: 1rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.container-area-2 > .header{
+  width: 100%;
+}
+
+.container-area-2 > .inputs{
+ 
+  width: 100%;
+}
+
+.container-area-2 > .inputs > input{
+  padding: 0.2rem;
+  font-size: larger;
+  width: 70px;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.container-area-2 > .calculate{
+  width: 100%;
+  height: auto;
+  margin-bottom: 6rem;
+}
+
+.container-area-2 > .calculate > button{
+  border: 2px solid black;
+  margin: 2rem;
+  padding: 0.6rem;
+  font-size: larger;
+  background-color: #2bae66ff;
+  border-radius: 0.9rem;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .container-area-2 > .inputs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width:100%;
+  }
+}
+
+/* area of angle and side */
+.container-area-3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(39, 4, 4);
+  background-color: rgba(255, 0, 0, 0.453);
+  margin: 3% 10%;
+  height: 35rem;
+  border-radius: 1rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.container-area-3 > .header{
+  width: 100%;
+}
+
+.container-area-3 > .inputs{
+ 
+  width: 100%;
+}
+
+.container-area-3 > .inputs > input{
+  padding: 0.2rem;
+  font-size: larger;
+  width: 70px;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.container-area-3 > .calculate{
+  width: 100%;
+  height: auto;
+  margin-bottom: 6rem;
+}
+
+.container-area-3 > .calculate > button{
+  border: 2px solid black;
+  margin: 2rem;
+  padding: 0.6rem;
+  font-size: larger;
+  background-color: #2bae66ff;
+  border-radius: 0.9rem;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .container-area-3 > .inputs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width:100%;
+  }
+}
