@@ -321,7 +321,6 @@
 
 /* quiz */
 .container-quiz{
-
   border: 2px solid rgb(39, 4, 4);
   background-color: rgba(255, 0, 0, 0.453);
   margin: 3% 10%;
@@ -335,12 +334,12 @@
   
 }
 
-.container-quiz > p{
+.scroll > p{
   font-size: larger;
   font-weight: bold;
 }
 
-.container-quiz > button{
+.scroll > div> button{
   border: 2px solid black;
   margin: 2rem;
   padding: 0.6rem;
@@ -348,4 +347,24 @@
   background-color: #2bae66ff;
   border-radius: 0.9rem;
   cursor: pointer;
+}
+
+.scroll {
+  margin:3%, 10%;
+  padding:4px;
+  height: 35rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.quiz-input{
+ margin: 0.5rem;
+ 
+
+}
+
+.scroll >label{
+  width: 25px;
+  margin-right: 25px;
 }

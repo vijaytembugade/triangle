@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../Styles/angleStyles.css";
 const Angles = () => {
   const [angle1, setAngle1] = useState();
   const [angle2, setAngle2] = useState();

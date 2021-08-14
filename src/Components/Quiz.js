@@ -1,84 +1,116 @@
 import React, { useState } from "react";
 
 const Quiz = () => {
-  const [question1, setQuestion1] = useState();
-  const [question2, setQuestion2] = useState();
-  const [question3, setQuestion3] = useState();
-  const [score, setScore] = useState(0);
+  const questions = [
+    {
+      que: "How many sides are there in triangle",
+      options: [2, 3, 1, 4],
+      ans: 3,
+      id: 0,
+    },
+    {
+      que: "If two angles of triangle are 60 and 60 degree, then what will be third angle?",
+      options: [35 , 60, 65, 90],
+      ans: 60,
+      id: 1,
+    },
+    {
+      que: "A triangle with one angle greater than 90 degrees called?",
+      options: ["equilateral triangle", "obtuse triangle", "acute triangle", "isosceles triangle"],
+      ans: "obtuse triangle",
+      id: 2,
+    },
+    {
+      que: "A triangle having at least two equal sides called?",
+      options: ["equilateral triangle", " obtuse triangle", "acute triangle", "isosceles triangle"],
+      ans: "isosceles triangle",
+      id: 3,
+    },
+    {
+      que: "A triangle with one angle equal to 90 degrees called?",
+      options: ["equilateral triangle", " obtuse triangle", "right triangle", "isosceles triangle"],
+      ans: "right triangle",
+      id: 4,
+    },
+    {
+      que: "In right triangle, the side opposite to right angle is called?",
+      options: ["altitude", "hypotenuse", "angle bisector"],
+      ans: "hypotenuse",
+      id: 5,
+    },
+    {
+      que: "In equilateral triangle, all three angles are equal?",
+      options: ["True", "False", "Don't know"],
+      ans: "True",
+      id: 6,
+    },
+    {
+      que: "The perimeter of a equilateral triangle is 15cm. What is the length of one side?",
+      options: [2, 5, 15, 3],
+      ans: 5,
+      id: 7,
+    },
+  ];
+  const [score, setScore] = useState();
+  const [arr , setArr] = useState({})
+  // let arr = {}
+  let sum = 0;
+  function selectedOption(e){
+    // console.log(questions[e.target.name].ans);
+    setArr({ ...arr, ...{[e.target.name] : e.target.value} }) 
+    // console.log(arr)
+  };
 
   function calculateScore() {
-    let s = 0;
-    if (question1 === "3") {
-      s += 1;
-      setScore(s);
-    } else {
-      setScore(score);
-    }
-    if (question2 === "sum of angle is 60 degree") {
-      s += 1;
-      setScore(s);
-    } else {
-      setScore(score);
-    }
-    if (question3 === "3") {
-      s += 1;
-      setScore(s);
-    } else {
-      setScore(score);
-    }
+    questions.forEach(element => {
+      console.log(arr[element.id])
+      console.log(element.ans)
+      if(arr[element.id] ==element.ans){
+        sum = sum+1
+      }
+
+      setScore(sum)
+    });
+    
+
+    
   }
 
   return (
-    <div className="container-quiz">
-      <p>How many side are there in triagle?</p>
-      <div onChange={(e) => setQuestion1(e.target.value)}>
-        <input name="question1" type="radio" value="4" />
-        4
-        <input name="question1" type="radio" value="6" />
-        6
-        <input name="question1" type="radio" value="3" />3
-      </div>
+    <div className="container-quiz ">
+      <div className="scroll">
+      {questions.map((q) => {
+        return (
+          <>
+            <p>{q.que}</p>
+            {q.options.map((option, i) => {
+              return (
+                <>
+                  <input
+                    className="quiz-input"
+                    onChange={selectedOption}
+                    name={q.id}
+                    id={q.id + option}
+                    type="radio"
+                    value={option}
+                  />
+                  <label for={q.id + option}>
+                  {option}
+                  </label>
+                </>
+              );
+            })}
+          </>
+        );
+      })}
 
-      <p>What is wrong about triangle?</p>
-      <div onChange={(e) => setQuestion2(e.target.value)}>
-        <input
-          name="question2"
-          type="radio"
-          value="sum of angle is 60 degree"
-        />
-        sum of angle is 60
-        <br />
-        <input
-          name="question2"
-          type="radio"
-          value="sum of angles is 180 degree"
-        />
-        sum of angles is 180
-        <br />
-        <input
-          name="question2"
-          type="radio"
-          value="equilataral triangle has angle 60 degree"
-        />
-        equilataral triangle has angle 60
-      </div>
-
-      <p>Which of following is not a triangle related theaorem?</p>
-      <div onChange={(e) => setQuestion3(e.target.value)}>
-        <input name="question3" type="radio" value="1" />
-        Pythagorus Theorem
-        <br />
-        <input name="question3" type="radio" value="2" />
-        Basic preporationality Theorem
-        <br />
-        <input name="question3" type="radio" value="3" />
-        Cyclic Qadrilateral Theorem
-        <br />
-      </div>
-
+      <div>
       <button onClick={calculateScore}>Submit</button>
+      </div>
+      </div>
+      
 
-     {score && <h2>Your score is {score}</h2>}
+      {score && <h2>Your score is {score}/8</h2>}
     </div>
   );
 };

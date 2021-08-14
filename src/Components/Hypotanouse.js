@@ -12,7 +12,7 @@ const Hypotanouse = () => {
 
   return (
     <div className="container-hypo">
-        <h2>Enter the lenths of sides of right angle triangle</h2>
+        <h2>Enter the length of sides of right angle triangle</h2>
         <p>Side A</p>
         <input step="any" min="0" onChange={(e)=>setSiteA(e.target.value)} type="number"></input>
         <p>Side B</p>
